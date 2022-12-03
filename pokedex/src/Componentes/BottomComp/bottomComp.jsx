@@ -1,6 +1,6 @@
 import './bottomComp.css'
 
-function bottomComp() {
+function BottomComp() {
     return (
       <>
 
@@ -8,4 +8,4 @@ function bottomComp() {
     );
   }
   
-  export default bottomComp;
+  export default BottomComp;

@@ -1,6 +1,6 @@
 import './topComp.css'
 
-function topComp() {
+function TopComp() {
     return (
       <>
 
@@ -8,4 +8,4 @@ function topComp() {
     );
   }
   
-  export default topComp;
+  export default TopComp;
