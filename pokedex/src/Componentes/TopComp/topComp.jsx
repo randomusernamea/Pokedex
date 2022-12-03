@@ -7,13 +7,13 @@ function TopComp(params) {
     }
 
     return (
-      <>
+      <div id="topComp">
         <img id="pokeballImg"/>
-        <h1>Pokedex</h1>
-        <button className={`changeSortingButton changeSortingButton${params.sorting}`} onClick={() => params.changeSorting(!(params.sorting))}>Placeholder</button>
-        <input onChange={inputChange} type="text" value={params.search}/>
+        <h1 id="topCompTitle">Pokedex</h1>
+        <button id="topCompSortingButton" className={`changeSortingButton changeSortingButton${params.sorting}`} onClick={() => params.changeSorting(!(params.sorting))}>Placeholder</button>
+        <input id="topCompInput" placeholder="Search" onChange={inputChange} type="text" value={params.search}/>
 
-      </>
+      </div>
     );
   }
   

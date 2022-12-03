@@ -1,0 +1,30 @@
+#topCompInput{
+    border-style:solid;
+    border-width: 2px;
+    border-color: black;
+    grid-area: search;
+    height: 30px;
+    width: 50%;
+    margin: auto;
+}
+
+#topComp{
+    width:100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-areas: 
+    "pokeballImg title changeSorting"
+    "search search search"
+}
+
+#pokeballImg{
+    grid-area:pokeballImg
+}
+
+#topCompSortingButton{
+    grid-area:changeSorting;
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+}
