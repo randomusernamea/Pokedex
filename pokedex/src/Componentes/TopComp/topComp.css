@@ -37,3 +37,9 @@
 .changeSortingButtonfalse{
     background-image: url('./Imgs/Number\ Search.png')
 }
+
+#pokeballImg{
+    width: 32px;
+    height: 32px;
+    margin:auto;
+}

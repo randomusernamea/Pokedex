@@ -1,5 +1,6 @@
 import './topComp.css'
 import {useState} from 'react'
+import img from './Imgs/Pokeball.png'
 
 function TopComp(params) {
     const inputChange = (e) => {
@@ -8,7 +9,7 @@ function TopComp(params) {
 
     return (
       <div id="topComp">
-        <img id="pokeballImg"/>
+        <img id="pokeballImg" src={img} alt="pokeball"/>
         <h1 id="topCompTitle">Pokedex</h1>
         <button id="topCompSortingButton" className={`changeSortingButton changeSortingButton${params.sorting}`} onClick={() => params.changeSorting(!(params.sorting))}></button>
         <input id="topCompInput" placeholder="Search" onChange={inputChange} type="text" value={params.search}/>
