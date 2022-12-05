@@ -24,7 +24,16 @@
 
 #topCompSortingButton{
     grid-area:changeSorting;
-    height: 40px;
+    height: 64px;
     width: 40px;
     margin: 15px;
+    padding: 0;
+}
+
+.changeSortingButtontrue{
+    background-image: url('./Imgs/AZ\ Search.png')
+}
+
+.changeSortingButtonfalse{
+    background-image: url('./Imgs/Number\ Search.png')
 }
