@@ -2,7 +2,6 @@ import TopComp from "../TopComp/topComp";
 import BottomComp from "../BottomComp/bottomComp";
 import "./pokedex.css";
 import { useEffect, useState } from "react";
-import {useState} from 'react'
 
 function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
