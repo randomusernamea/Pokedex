@@ -10,10 +10,10 @@ function Pokedex() {
 
 
     return (
-      <>
+      <div id="pokedex">
         <TopComp id="topComp" sorting={sorting} changeSorting={setSorting} search={search} changeSearch={setSearch}/>
         <BottomComp/>
-      </>
+      </div>
     );
   }
   
