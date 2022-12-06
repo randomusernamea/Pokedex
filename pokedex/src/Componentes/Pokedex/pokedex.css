@@ -1,5 +1,5 @@
 #pokedex{
     display:grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 300px 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-columns: 1fr;
 }

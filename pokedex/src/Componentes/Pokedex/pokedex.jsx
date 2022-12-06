@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
+  const [pokemonsOrdered, setPokemonsOrdered] = useState([]);
       const [sorting, setSorting] = useState(false);
     const [search, setSearch] = useState('');
 
@@ -20,6 +21,7 @@ function Pokedex() {
       })
       .then((data) => {
         setPokemons(data);
+        setPokemonsOrdered(data);
       })
       .catch((error) => {
         alert(error.statusText);
@@ -30,10 +32,62 @@ function Pokedex() {
     consultarPokemons();
   }, []);
 
+  function changeSorting(param){
+    setSorting(param)
+    let a = pokemonsOrdered;
+    a.sort((a,b)=>{
+        if (sorting === true){
+            if (a.nombre > b.nombre){
+                return 1;
+            }
+            if (a.nombre < b.nombre)
+            {return -1;}
+            return -1;
+        } 
+        if (sorting === false){
+            if (a.id > b.id){
+                return 1;
+            }
+            if (a.id < b.id)
+            {return -1;}
+            return -1;
+        } 
+        return 0;
+    })
+    setPokemonsOrdered(a);
+  }
+
+
+function sortAndFilterPokemon(search){
+    let a = [];
+    a = pokemons.filter((poke) => {
+        return poke.nombre.toLowerCase().includes(search.toLowerCase());
+    })
+    a.sort((a,b)=>{
+        if (sorting === true){
+            if (a.nombre > b.nombre){
+                return 1;
+            }
+            if (a.nombre < b.nombre)
+            {return -1;}
+            return -1;
+        } 
+        if (sorting === false){
+            if (a.id > b.id){
+                return 1;
+            }
+            if (a.id < b.id)
+            {return -1;}
+            return -1;
+        } 
+        return 0;
+    })
+    return a;
+}
   return (
     <div id="pokedex">
-      <TopComp id="topComp" sorting={sorting} changeSorting={setSorting} search={search} changeSearch={setSearch}/>
-      <BottomComp pokemones={pokemons} />
+      <TopComp id="topComp" setOrderFilter={setPokemonsOrdered}sortAndFilter={sortAndFilterPokemon} sorting={sorting} changeSorting={changeSorting} search={search} changeSearch={setSearch}/>
+      <BottomComp pokemones={pokemonsOrdered} />
     </div>
   );
 }

@@ -50,7 +50,7 @@ function Card(props) {
       <p style={{ color: divStyle }} className="bottomCompP">
         {props.pokeid}
       </p>
-      <img className="bottomCompImg" src={props.pokeimg} />
+      <img className="bottomCompImg" src={props.pokeimg} alt={props.nombre}/>
       <h5 style={{ backgroundColor: divStyle }} className="bottomCompNombres">
         {props.nombre}
       </h5>

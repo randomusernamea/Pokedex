@@ -5,6 +5,8 @@ import img from './Imgs/Pokeball.png'
 function TopComp(params) {
     const inputChange = (e) => {
         params.changeSearch(e.target.value)
+        let a = params.sortAndFilter(e.target.value);
+        params.setOrderFilter(a);
     }
 
     return (
