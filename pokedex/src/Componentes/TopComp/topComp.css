@@ -1,0 +1,45 @@
+#topCompInput{
+    border-style:solid;
+    border-width: 2px;
+    border-color: black;
+    grid-area: search;
+    height: 30px;
+    width: 50%;
+    margin: auto;
+}
+
+#topComp{
+    width:100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-areas: 
+    "pokeballImg title changeSorting"
+    "search search search"
+}
+
+#pokeballImg{
+    grid-area:pokeballImg
+}
+
+#topCompSortingButton{
+    grid-area:changeSorting;
+    height: 64px;
+    width: 40px;
+    margin: 15px;
+    padding: 0;
+}
+
+.changeSortingButtontrue{
+    background-image: url('./Imgs/AZ\ Search.png')
+}
+
+.changeSortingButtonfalse{
+    background-image: url('./Imgs/Number\ Search.png')
+}
+
+#pokeballImg{
+    width: 32px;
+    height: 32px;
+    margin:auto;
+}

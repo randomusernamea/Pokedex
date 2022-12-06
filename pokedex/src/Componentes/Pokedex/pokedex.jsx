@@ -2,9 +2,12 @@ import TopComp from "../TopComp/topComp";
 import BottomComp from "../BottomComp/bottomComp";
 import "./pokedex.css";
 import { useEffect, useState } from "react";
+import {useState} from 'react'
 
 function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
+      const [sorting, setSorting] = useState(false);
+    const [search, setSearch] = useState('');
 
   const consultarPokemons = () => {
     fetch("http://localhost:3000/pokemons", {
@@ -29,11 +32,12 @@ function Pokedex() {
   }, []);
 
   return (
-    <>
-      <TopComp />
+    <div id="pokedex">
+      <TopComp id="topComp" sorting={sorting} changeSorting={setSorting} search={search} changeSearch={setSearch}/>
       <BottomComp pokemones={pokemons} />
-    </>
+    </div>
   );
 }
 
 export default Pokedex;
+
