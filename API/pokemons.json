@@ -2,10 +2,11 @@
     {
         "id": "#001",
         "nombre": "Bulbasur",
+        "img": "/images/001.png",
         "tipo1": "Grass",
         "tipo2": "Poison",
-        "weight": 6.9,
-        "height": 0.7,
+        "weight": "6,9kg",
+        "height": "0,7m",
         "ability1": "Chlorophyll",
         "ability2": "Overgrow" ,
         "stats":{
@@ -21,9 +22,10 @@
     },
     
     {
-        "id": "#002",
+        "id": "#004",
         "nombre": "Charmander",
-        "tipo1":"fire",
+        "img": "/images/004.png",
+        "tipo1":"Fire",
         "tipo2":"",
         "weight": "8.5kg",
         "height": "0,6m",
@@ -42,9 +44,10 @@
     },
     
     {
-        "id": "#003",
+        "id": "#007",
         "nombre": "Squirtle",
-        "tipo1": "water",
+        "img": "/images/007.png",
+        "tipo1": "Water",
         "tipo2": "",
         "weight": "9,0kg",
         "height": "0.5m",
@@ -63,8 +66,9 @@
     },
    
     {
-        "id": "#004",
+        "id": "#012",
         "nombre": "Butterfree",
+        "img": "/images/012.png",
         "tipo1": "Bug",
         "tipo2": "Flying",
         "weight": "32,0kg",
@@ -86,6 +90,7 @@
     {
         "id": "#304",
         "nombre": "Aron",
+        "img": "/images/304.png",
         "tipo1":"Steel",
         "tipo2": "Rock",
         "weight": "60,0kg",
@@ -107,6 +112,7 @@
     {
         "id": "#151",
         "nombre": "Mew",
+        "img": "/images/151.png",
         "tipo1":"Psychic",
         "tipo2":"",
         "weight": "4,0kg",
@@ -129,6 +135,7 @@
     {
         "id": "#025",
         "nombre": "Pikachu",
+        "img": "/images/025.png",
 	"tipo1": "Electric" ,
 	"tipo2": "",
         "weight": "6,0",
@@ -150,6 +157,7 @@
     {
         "id": "#092",
         "nombre": "Gastly",
+        "img": "/images/092.png",
 	"tipo1": "Ghost" ,
 	"tipo2": "Poison",
         "weight": "0,1",
@@ -170,6 +178,7 @@
     {
         "id": "#132",
         "nombre": "Ditto",
+        "img": "/images/132.png",
 	"tipo1": "Normal" ,
 	"tipo2": "",
         "weight": "4,0",
@@ -186,29 +195,9 @@
            },
         
         "descripcion": "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes."
-    },
-
-    {
-        "id": "#151",
-        "nombre": "Mew",
-	"tipo1": "Psychic",
-	"tipo2": "",
-        "weight": 4.0,
-        "height": 0.4,
-        "ability1": "Syncrhonize",
-        "ability2": "" ,
-        "stats":{
-            "hp": "100",
-            "atk": "100",
-            "def": "100",
-            "satk": "100",
-            "sdef": "100",
-            "spd": "100"
-           },
-        
-        "descripcion": "It's very intelligent and can use an incredible variety of moves. Many believe that all other Pokémon are descendants of this one."
     }
 
+   
     
 
 

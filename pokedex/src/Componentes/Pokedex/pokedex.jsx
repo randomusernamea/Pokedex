@@ -7,7 +7,7 @@ function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
 
   const consultarPokemons = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon/", {
+    fetch("http://localhost:3000/pokemons", {
       method: "GET",
     })
       .then((response) => {

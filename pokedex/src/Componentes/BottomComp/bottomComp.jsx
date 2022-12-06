@@ -1,15 +1,19 @@
 import "./bottomComp.css";
+import Card from "../Card/card";
 
 function BottomComp({ pokemones }) {
   return (
     <>
       <div className="cards">
-        {console.log(pokemones)}
-        {pokemones?.results?.map((poke) => {
+        {/* {console.log(pokemones)} */}
+        {pokemones?.map((poke) => {
           return (
-            <div>
-              <h3>{poke.name}</h3>
-            </div>
+            <Card
+              tipo={poke.tipo1}
+              nombre={poke.nombre}
+              pokeid={poke.id}
+              pokeimg={poke.img}
+            ></Card>
           );
         })}
       </div>

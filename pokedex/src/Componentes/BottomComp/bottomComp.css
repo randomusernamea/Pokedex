@@ -5,10 +5,47 @@
 }
 
 .cards {
-    display: block;
-    background-color: aqua;
-    width: 200px;
-    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  
+    width: 100%;
+
 
 }
+
+.bottomCompP {
+    text-align: right;
+    
+}
+
+.bottomCompImg {
+    display: block;
+    margin:auto ;
+    object-fit: contain;
+    width:64px ;
+    
+}
+
+.bottomCompDiv {
+    width: 100px;
+    margin: 10px;
+    border: solid 2px;
+    border-radius:15px;
+}
+
+.bottomCompNombres {
+    width: 104%;
+    border-radius: 0px 0px 15px 15px;
+    position: relative;
+    right: 2px;
+    top: 2px;
+    text-align: center;
+       background-color: black;
+       color: white;
+}
+
+
+
+
 
