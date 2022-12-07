@@ -1,5 +1,6 @@
 import "./bottomComp.css";
 import Card from "../Card/card";
+import { Link } from "react-router-dom";
 
 function BottomComp({ pokemones }) {
   return (
@@ -8,15 +9,18 @@ function BottomComp({ pokemones }) {
         {/* {console.log(pokemones)} */}
         {pokemones?.map((poke) => {
           return (
-            <Card
-              tipo={poke.tipo1}
-              nombre={poke.nombre}
-              pokeid={poke.id}
-              pokeimg={poke.img}
-            ></Card>
+            // <a href="http://localhost:3002/01">
+            <Link to={`pokemons/${poke.id}`}>
+              <Card
+                tipo={poke.tipo1}
+                nombre={poke.nombre}
+                pokeid={poke.id}
+                pokeimg={poke.img}
+              ></Card>
+            </Link>
           );
         })}
-      </div>
+      </div>{" "}
     </>
   );
 }
