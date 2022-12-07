@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import BigCard from "./BigCard/BigCard";
+import BigCard from "./Componentes/BigCard/bigCard";
 
 const router = createBrowserRouter([
   {

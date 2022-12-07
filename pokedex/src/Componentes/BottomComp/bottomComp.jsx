@@ -9,7 +9,6 @@ function BottomComp({ pokemones }) {
         {/* {console.log(pokemones)} */}
         {pokemones?.map((poke) => {
           return (
-            // <a href="http://localhost:3002/01">
             <Link to={`pokemons/${poke.id}`}>
               <Card
                 tipo={poke.tipo1}
