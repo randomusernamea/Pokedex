@@ -1,0 +1,17 @@
+.bigCardPokeParamsDesc{
+    color: #E0E0E0;
+}
+
+#bigCardDiv{
+    border-radius: 5px;
+}
+
+#bigCardBottomDiv{
+    border-radius: 5px;
+    background-color: white;
+}
+
+#bigCardName{
+    color:white;
+    size: 32px;
+}
