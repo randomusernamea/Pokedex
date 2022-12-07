@@ -1,6 +1,6 @@
 {"pokemons": [
     {
-        "id": "#001",
+        "id": "001",
         "nombre": "Bulbasur",
         "img": "/images/001.png",
         "tipo1": "Grass",
@@ -22,7 +22,7 @@
     },
     
     {
-        "id": "#004",
+        "id": "004",
         "nombre": "Charmander",
         "img": "/images/004.png",
         "tipo1":"Fire",
@@ -44,7 +44,7 @@
     },
     
     {
-        "id": "#007",
+        "id": "007",
         "nombre": "Squirtle",
         "img": "/images/007.png",
         "tipo1": "Water",
@@ -66,7 +66,7 @@
     },
    
     {
-        "id": "#012",
+        "id": "012",
         "nombre": "Butterfree",
         "img": "/images/012.png",
         "tipo1": "Bug",
@@ -88,7 +88,7 @@
     },
     
     {
-        "id": "#304",
+        "id": "304",
         "nombre": "Aron",
         "img": "/images/304.png",
         "tipo1":"Steel",
@@ -110,7 +110,7 @@
     },
 
     {
-        "id": "#151",
+        "id": "151",
         "nombre": "Mew",
         "img": "/images/151.png",
         "tipo1":"Psychic",
@@ -133,7 +133,7 @@
 
 
     {
-        "id": "#025",
+        "id": "025",
         "nombre": "Pikachu",
         "img": "/images/025.png",
 	"tipo1": "Electric" ,
@@ -155,7 +155,7 @@
     },
 
     {
-        "id": "#092",
+        "id": "092",
         "nombre": "Gastly",
         "img": "/images/092.png",
 	"tipo1": "Ghost" ,
@@ -176,7 +176,7 @@
         "descripcion": "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison."
     },
     {
-        "id": "#132",
+        "id": "132",
         "nombre": "Ditto",
         "img": "/images/132.png",
 	"tipo1": "Normal" ,
