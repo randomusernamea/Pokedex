@@ -33,6 +33,7 @@ function Pokedex() {
     consultarPokemons();
   }, []);
 
+
   function changeSorting(param) {
     setSorting(param);
     let a = pokemonsOrdered;
@@ -57,8 +58,12 @@ function Pokedex() {
       }
       return 0;
     });
+
     setPokemonsOrdered(a);
+    console.log(a);
+    console.log(sorting);
   }
+
 
   function sortAndFilterPokemon(search) {
     let a = [];
@@ -86,6 +91,7 @@ function Pokedex() {
       }
       return 0;
     });
+
     return a;
   }
   return (

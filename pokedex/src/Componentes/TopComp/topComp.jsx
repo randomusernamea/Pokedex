@@ -7,8 +7,8 @@ function TopComp(params) {
         params.changeSearch(e.target.value)
         let a = params.sortAndFilter(e.target.value);
         params.setOrderFilter(a);
+        
     }
-
     return (
       <div id="topComp">
         <img id="pokeballImg" src={img} alt="pokeball"/>
