@@ -2,16 +2,17 @@ import TopComp from "../TopComp/topComp";
 import BottomComp from "../BottomComp/bottomComp";
 import "./pokedex.css";
 import { useEffect, useState } from "react";
-import BigCard from "../../BigCard/BigCard";
+import { useParams } from "react-router-dom";
 
 function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
   const [pokemonsOrdered, setPokemonsOrdered] = useState([]);
   const [sorting, setSorting] = useState(false);
   const [search, setSearch] = useState("");
+  const { idPokemons } = useParams;
 
   const consultarPokemons = () => {
-    fetch("http://localhost:3000/pokemons", {
+    fetch("http://localhost:3000/pokemons", idPokemons, {
       method: "GET",
     })
       .then((response) => {
@@ -32,7 +33,6 @@ function Pokedex() {
   useEffect(() => {
     consultarPokemons();
   }, []);
-
 
   function changeSorting(param) {
     setSorting(param);
@@ -63,7 +63,6 @@ function Pokedex() {
     console.log(a);
     console.log(sorting);
   }
-
 
   function sortAndFilterPokemon(search) {
     let a = [];
