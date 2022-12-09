@@ -29,16 +29,19 @@ function Pokedex() {
         alert(error.statusText);
       });
   };
-
   useEffect(() => {
     consultarPokemons();
   }, []);
-
   function changeSorting(param) {
+    console.log(sorting);
     setSorting(param);
-    let a = pokemonsOrdered;
+    let a = sortPokes(pokemonsOrdered, param);
+    setPokemonsOrdered(a);
+    console.log(sorting);
+  }
+  function sortPokes(a, sortOrder){
     a.sort((a, b) => {
-      if (sorting === true) {
+      if (sortOrder === true) {
         if (a.nombre > b.nombre) {
           return 1;
         }
@@ -47,7 +50,7 @@ function Pokedex() {
         }
         return -1;
       }
-      if (sorting === false) {
+      if (sortOrder === false) {
         if (a.id > b.id) {
           return 1;
         }
@@ -58,39 +61,14 @@ function Pokedex() {
       }
       return 0;
     });
-
-    setPokemonsOrdered(a);
-    console.log(a);
-    console.log(sorting);
+    return a;
   }
-
   function sortAndFilterPokemon(search) {
     let a = [];
     a = pokemons.filter((poke) => {
       return poke.nombre.toLowerCase().includes(search.toLowerCase());
     });
-    a.sort((a, b) => {
-      if (sorting === true) {
-        if (a.nombre > b.nombre) {
-          return 1;
-        }
-        if (a.nombre < b.nombre) {
-          return -1;
-        }
-        return -1;
-      }
-      if (sorting === false) {
-        if (a.id > b.id) {
-          return 1;
-        }
-        if (a.id < b.id) {
-          return -1;
-        }
-        return -1;
-      }
-      return 0;
-    });
-
+    a = sortPokes(a, sorting);
     return a;
   }
   return (
@@ -99,6 +77,7 @@ function Pokedex() {
         id="topComp"
         setOrderFilter={setPokemonsOrdered}
         sortAndFilter={sortAndFilterPokemon}
+        pokemonsOrdered={pokemonsOrdered}
         sorting={sorting}
         changeSorting={changeSorting}
         search={search}

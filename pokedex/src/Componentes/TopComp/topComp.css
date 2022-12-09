@@ -25,18 +25,21 @@
 }
 
 #topCompSortingButton{
+    border: 0;
     grid-area:changeSorting;
     height: 64px;
     width: 40px;
-    margin: 15px;
+    margin: 10px;
     padding: 0;
 }
 
 .changeSortingButtontrue{
-    background-image: url('./Imgs/AZ\ Search.png')
+    background-repeat: no-repeat;
+   background-image: url('./Imgs/AZ\ Search.png')
 }
 
 .changeSortingButtonfalse{
+    background-repeat: no-repeat;
     background-image: url('./Imgs/Number\ Search.png')
 }
 
