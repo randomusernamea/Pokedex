@@ -127,11 +127,11 @@
 }
 
 #bigCardAbilities {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     grid-area: abilities;
-    
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "abilities" "text"
 }
 
 .bigCardPokeParamsSmall {
@@ -258,4 +258,15 @@
     width: 230px;
     height: 230px;
     z-index: 1;
+}
+
+#bigCardParamsAbilities{
+    grid-area: text;
+}
+
+#bigcardabilities{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    
 }
