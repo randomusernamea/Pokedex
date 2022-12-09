@@ -74,7 +74,7 @@ function BigCard() {
             to={`/pokemons/${getPrevious(poke.id)}`}
           ></Link>
         )}
-        <img src={poke.img} id="bigCardPokeImg" />
+        <img src={poke.img} id="bigCardPokeImg" alt={poke.nombre}/>
         {getNext(poke.id) !== "000" && (
           <Link
             id="bigCardArrowRight"
