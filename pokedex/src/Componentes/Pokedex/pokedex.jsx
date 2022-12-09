@@ -33,15 +33,15 @@ function Pokedex() {
     consultarPokemons();
   }, []);
   function changeSorting(param) {
+    console.log(sorting);
     setSorting(param);
-    let a = sortPokes(pokemonsOrdered);
+    let a = sortPokes(pokemonsOrdered, param);
     setPokemonsOrdered(a);
-    console.log(a);
     console.log(sorting);
   }
-  function sortPokes(a){
+  function sortPokes(a, sortOrder){
     a.sort((a, b) => {
-      if (sorting === true) {
+      if (sortOrder === true) {
         if (a.nombre > b.nombre) {
           return 1;
         }
@@ -50,7 +50,7 @@ function Pokedex() {
         }
         return -1;
       }
-      if (sorting === false) {
+      if (sortOrder === false) {
         if (a.id > b.id) {
           return 1;
         }
@@ -68,7 +68,7 @@ function Pokedex() {
     a = pokemons.filter((poke) => {
       return poke.nombre.toLowerCase().includes(search.toLowerCase());
     });
-    a = sortPokes(a);
+    a = sortPokes(a, sorting);
     return a;
   }
   return (
