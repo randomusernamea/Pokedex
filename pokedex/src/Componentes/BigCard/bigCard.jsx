@@ -1,8 +1,10 @@
 import "./bigCard.css";
-import { tipoAcolor } from "../../Utilities/utilities";
+import { tipoAcolor, getPrevious, getNext } from "../../Utilities/utilities";
+
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function BigCard() {
   const { idPokemons } = useParams();
@@ -30,8 +32,8 @@ function BigCard() {
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
   });
 
-  function consultarId() {
-    fetch("http://localhost:3000/pokemons/" + idPokemons, {
+  function consultarId(id) {
+    fetch("http://localhost:3000/pokemons/" + id, {
       method: "GET",
     })
       .then((response) => {
@@ -48,7 +50,7 @@ function BigCard() {
       });
   }
   useEffect(() => {
-    consultarId();
+    consultarId(idPokemons);
     console.log(toString(255 - parseInt(poke.stats.spd)).concat("px"));
     //   setPoke(
     //     poke.filter((pokes) => {
@@ -60,13 +62,28 @@ function BigCard() {
   return (
     <div id="bigCardDiv" style={{ backgroundColor: tipoAcolor(poke.tipo1) }}>
       <div id="bigCardTopDiv">
-        <a href="http://localhost:3001" id="bigCardArrow" />
+        <Link to={"/"}>
+          <div id="bigCardArrow"> </div>
+        </Link>
         <p id="bigCardName">{poke.nombre}</p>
         <p id="bigCardId">#{poke.id}</p>
-        <div id="bigCardArrowLeft"></div>
+        {getPrevious(poke.id) !== "000" && (
+          <Link
+            id="bigCardArrowLeft"
+            onClick={() => consultarId(getPrevious(poke.id))}
+            to={`/pokemons/${getPrevious(poke.id)}`}
+          ></Link>
+        )}
         <img src={poke.img} id="bigCardPokeImg" />
-        <div></div>
+        {getNext(poke.id) !== "000" && (
+          <Link
+            id="bigCardArrowRight"
+            onClick={() => consultarId(getNext(poke.id))}
+            to={`/pokemons/${getNext(poke.id)}`}
+          ></Link>
+        )}
       </div>
+
       <div id="bigCardBottomDiv">
         <p style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
           About
@@ -112,9 +129,9 @@ function BigCard() {
             <p className="bigCardPokeParamsDesc ">Abilities</p>
           </div>
         </div>
-        <div>
-          <p id="bigCardDesc">{poke.descripcion}</p>
-        </div>
+
+        <p id="bigCardDesc">{poke.descripcion}</p>
+
         <div id="bigCardStats">
           <p id="bigCardBaseStats">Base Stats</p>
           <div style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardStatNames">
@@ -245,6 +262,7 @@ function BigCard() {
           </div>
         </div>
       </div>
+      <div id="bigCardPokeBallImage"></div>
     </div>
   );
 }

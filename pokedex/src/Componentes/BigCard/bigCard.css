@@ -8,16 +8,18 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: 280px 1fr;
 
     border-radius: 5px;
 }
 
 #bigCardBottomDiv{
+    
     display: grid;
     grid-template-columns:1fr ;
-    grid-template-rows: 100px 50px 80px 80px 1fr;
-    grid-template-areas: "tipos"
+    grid-template-rows:  50px 100px 50px 80px 80px 1fr;
+    grid-template-areas:"asd" 
+                        "tipos"
                          "about"
                          "pokeParams"
                          "desc"
@@ -37,7 +39,6 @@
 
 #bigCardTopDiv {
     font-size: 1.5rem;
-    background-image:url("../../../public/images/Pokeball.png") ;
     height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -69,6 +70,7 @@
 }
 
 #bigCardPokeImg {
+    z-index: 2;
     position: relative;
     top: 100px;
     margin: auto;
@@ -145,6 +147,7 @@
  }
 
  #bigCardDesc{
+    grid-area: desc;
     text-align: left;
     padding: 0px 30px;
  }
@@ -217,4 +220,42 @@
 
 #bigCardWeightImage {
     margin-left: 40px;
+}
+
+#bigCardArrowLeft {
+    z-index: 2;
+    margin-top: 120px;
+    grid-area: next;
+    background-image: url("../../../public/images/arrowLeft.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 100px;
+
+    grid-area: previous;
+}
+
+#bigCardArrowRight {
+    z-index: 2;
+    margin-top: 120px;
+    grid-area: next;
+    background-image: url("../../../public/images/Frame.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 100px;
+}
+
+#bigCardPokeBallImage {
+    position: absolute;
+    top: 50px;
+    
+    right: 10px;
+    opacity: 0.3;
+    background-image: url("../../../public/images/Pokeball.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 230px;
+    height: 230px;
+    z-index: 1;
 }
