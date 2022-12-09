@@ -2,12 +2,12 @@ import "./bottomComp.css";
 import Card from "../Card/card";
 import { Link } from "react-router-dom";
 
-function BottomComp({ pokemones }) {
+function BottomComp( props ) {
+
   return (
     <>
       <div className="cards">
-        {/* {console.log(pokemones)} */}
-        {pokemones?.map((poke) => {
+        {props.pokemones?.map((poke) => {
           return (
             <Link to={`pokemons/${poke.id}`}>
               <Card

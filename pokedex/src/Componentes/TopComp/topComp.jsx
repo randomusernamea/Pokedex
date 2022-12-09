@@ -8,6 +8,14 @@ function TopComp(params) {
     let a = params.sortAndFilter(e.target.value);
     params.setOrderFilter(a);
   };
+
+  const sortChange = (e) => {
+    params.changeSorting (e.target.value);
+  }
+
+
+
+
   return (
     <div id="topComp">
       <img id="pokeballImg" src={img} alt="pokeball" />
