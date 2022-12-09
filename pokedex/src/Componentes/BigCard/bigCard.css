@@ -76,6 +76,9 @@
     margin: auto;
     grid-area: image;
 }
+#bigCardPokeImg:hover{
+    top: 80px;
+}
 
 
 #bigCardPAbout {
@@ -268,5 +271,5 @@
     display: flex;
     flex-direction:column;
     justify-content: center;
-    
+
 }
