@@ -33,11 +33,9 @@ function Pokedex() {
     consultarPokemons();
   }, []);
   function changeSorting(param) {
-    console.log(sorting);
     setSorting(param);
     let a = sortPokes(pokemonsOrdered, param);
     setPokemonsOrdered(a);
-    console.log(sorting);
   }
   function sortPokes(a, sortOrder){
     a.sort((a, b) => {
