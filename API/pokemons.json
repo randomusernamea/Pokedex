@@ -29,8 +29,8 @@
         "tipo2":"",
         "weight": "8.5kg",
         "height": "0,6m",
-        "ability1": "Mega-Punch",
-        "ability2": "Fire-Punch" ,
+        "ability1": "Blaze",
+        "ability2": "Solar Power" ,
         "stats":{
             "hp": "039",
             "atk": "052",

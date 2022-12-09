@@ -11,21 +11,21 @@ function BigCard() {
 
   const [poke, setPoke] = useState({
     id: "000",
-    nombre: "missingNo",
-    img: "/images/001.png",
-    tipo1: "Grass",
-    tipo2: "Poison",
-    weight: "6,9kg",
-    height: "0,7m",
-    ability1: "Chlorophyll",
-    ability2: "Overgrow",
+    nombre: "MissingNo",
+    img: "/images/000.svg",
+    tipo1: "Normal",
+    tipo2: "",
+    weight: "10,0kg",
+    height: "1,0m",
+    ability1: "Error",
+    ability2: "",
     stats: {
-      hp: "045",
-      atk: "049",
-      def: "049",
-      satk: "065",
-      sdef: "065",
-      spd: "045",
+      hp: "033",
+      atk: "136",
+      def: "000",
+      satk: "006",
+      sdef: "006",
+      spd: "029",
     },
 
     descripcion:
@@ -122,11 +122,13 @@ function BigCard() {
             </p>
           </div>
           <div id="bigCardAbilities">
-            <p className="bigCardPokeParamsP">{poke.ability1}</p>
-            {poke.ability2 !== "" && (
-              <p className="bigCardPokeParamsP">{poke.ability2}</p>
-            )}
-            <p className="bigCardPokeParamsDesc ">Abilities</p>
+            <div id="bigCardAbilitiesDiv">
+              <p className="bigCardPokeParamsP">{poke.ability1}</p>
+              {poke.ability2 !== "" && (
+                <p className="bigCardPokeParamsP">{poke.ability2}</p>
+              )}
+            </div>
+            <p id="bigCardParamsAbilities" className="bigCardPokeParamsDesc ">Abilities</p>
           </div>
         </div>
 
