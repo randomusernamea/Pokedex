@@ -76,6 +76,12 @@
     margin: auto;
     grid-area: image;
 }
+#bigCardPokeImg:hover {
+
+      margin-top: 80px;
+}
+
+
 
 
 #bigCardPAbout {
