@@ -85,10 +85,15 @@ function BigCard() {
       </div>
 
       <div id="bigCardBottomDiv">
-        <div id="bigCardEvosDiv"><p className="bigCardPAbout" style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
+        <div id="bigCardEvosDiv">
+          <p className="bigCardPAbout" style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
           Evoluciones
         </p>
-        <div></div>
+        {(poke.stage1 || poke.stage2 || poke.stage3) && <div id="bigCardPEvos">
+          {poke.stage1 && <img className="bigCardPokeStageImg" src={poke.stage1pic} alt={poke.stage1}/>}
+          {poke.stage2 && <img className="bigCardPokeStageImg" src={poke.stage2pic} alt={poke.stage2}/>}
+          {poke.stage3 && <img className="bigCardPokeStageImg" src={poke.stage3pic} alt={poke.stage3}/>}
+        </div>}
         </div>
         <div id="bigCardTipos">
           <p
