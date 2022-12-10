@@ -44,7 +44,7 @@ export const tipoAcolor = (tipo) => {
 export const getPrevious = (id) => {
   switch (id) {
     case "001":
-      return "000";
+      return "304";
     case "004":
       return "001";
     case "007":
@@ -85,7 +85,7 @@ export const getNext = (id) => {
     case "151":
       return "304";
     case "304":
-      return "000";
+      return "001";
     default:
       return "000";
   }
