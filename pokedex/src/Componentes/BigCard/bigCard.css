@@ -81,10 +81,19 @@
 }
 
 
-#bigCardPAbout {
+#bigCardEvosDiv{
     grid-area: about;
+}
+#bigCardPAbout {
     text-align: center;
     
+}
+
+#bigCardPEvos{
+    display:none;
+}
+#bigCardPabout:hover + #bigCardPEvos{
+    display:block;
 }
 
 #bigCardTipos {

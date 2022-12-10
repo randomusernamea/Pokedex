@@ -85,9 +85,11 @@ function BigCard() {
       </div>
 
       <div id="bigCardBottomDiv">
-        <p style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
-          About
+        <div id="bigCardEvosDiv"><p className="bigCardPAbout" style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
+          Evoluciones
         </p>
+        <div></div>
+        </div>
         <div id="bigCardTipos">
           <p
             className="tipo"
