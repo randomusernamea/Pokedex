@@ -5,11 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import BigCard from "./Componentes/BigCard/bigCard";
+import Pokedex from "./Componentes/Pokedex/pokedex";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "pokedex/:pokemons",
+    element: <Pokedex />,
   },
   {
     path: "pokemons/:idPokemons",
