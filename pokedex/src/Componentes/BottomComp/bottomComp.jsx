@@ -8,7 +8,7 @@ function BottomComp(props) {
       <div className="cards">
         {props.pokemones?.map((poke) => {
           return (
-            <Link to={`pokemons/${poke.id}`}>
+            <Link to={`/pokemons/${poke.id}`}>
               <Card
                 tipo={poke.tipo1}
                 nombre={poke.nombre}

@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "pokedex/:pokemons",
+    path: "pokedex",
     element: <Pokedex />,
   },
   {
