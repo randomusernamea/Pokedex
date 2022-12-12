@@ -29,7 +29,7 @@ function BigCard() {
     },
 
     descripcion:
-      "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+      ".....",
   });
 
   function consultarId(id) {
@@ -85,9 +85,16 @@ function BigCard() {
       </div>
 
       <div id="bigCardBottomDiv">
-        <p style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
-          About
+        <div id="bigCardEvosDiv">
+          <p className="bigCardPAbout" style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
+          Evoluciones
         </p>
+        {(poke.stage1 || poke.stage2 || poke.stage3) && <div id="bigCardPEvos">
+          {poke.stage1 && <img id="bigCardPokeStageImg1" className="bigCardPokeStageImg" src={poke.stage1pic} alt={poke.stage1}/>}
+          {poke.stage2 && <img id="bigCardPokeStageImg2" className="bigCardPokeStageImg" src={poke.stage2pic} alt={poke.stage2}/>}
+          {poke.stage3 && <img id="bigCardPokeStageImg3" className="bigCardPokeStageImg" src={poke.stage3pic} alt={poke.stage3}/>}
+        </div>}
+        </div>
         <div id="bigCardTipos">
           <p
             className="tipo"
