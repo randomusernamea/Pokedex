@@ -76,6 +76,19 @@
     margin: auto;
     grid-area: image;
 }
+
+.bigCardPokeStageImg{
+    z-index: 2;
+    display: inline;
+    position: relative;
+    top: -150px;
+    height: 100px;
+    width: 100px;
+    margin:auto;
+}
+
+
+
 #bigCardPokeImg:hover{
     top: 80px;
 }
@@ -93,7 +106,9 @@
     display:none;
 }
 #bigCardPAbout:hover + #bigCardPEvos{
-    display:block;
+    flex-direction: row;
+    
+    display:flex;
 }
 
 #bigCardPAbout:not :hover + #bigCardPEvos{

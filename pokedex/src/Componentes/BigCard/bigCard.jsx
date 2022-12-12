@@ -90,9 +90,9 @@ function BigCard() {
           Evoluciones
         </p>
         {(poke.stage1 || poke.stage2 || poke.stage3) && <div id="bigCardPEvos">
-          {poke.stage1 && <img className="bigCardPokeStageImg" src={poke.stage1pic} alt={poke.stage1}/>}
-          {poke.stage2 && <img className="bigCardPokeStageImg" src={poke.stage2pic} alt={poke.stage2}/>}
-          {poke.stage3 && <img className="bigCardPokeStageImg" src={poke.stage3pic} alt={poke.stage3}/>}
+          {poke.stage1 && <img id="bigCardPokeStageImg1" className="bigCardPokeStageImg" src={poke.stage1pic} alt={poke.stage1}/>}
+          {poke.stage2 && <img id="bigCardPokeStageImg2" className="bigCardPokeStageImg" src={poke.stage2pic} alt={poke.stage2}/>}
+          {poke.stage3 && <img id="bigCardPokeStageImg3" className="bigCardPokeStageImg" src={poke.stage3pic} alt={poke.stage3}/>}
         </div>}
         </div>
         <div id="bigCardTipos">
