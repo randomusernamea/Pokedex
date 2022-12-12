@@ -45,7 +45,7 @@ function Home() {
               placeholder="password"
             />
             <br />
-            <Link to={`pokedex/:pokemons`}>
+            <Link to={`pokedex`}>
               <button type="submit">Iniciar</button>
             </Link>
           </form>

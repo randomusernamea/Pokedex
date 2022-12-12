@@ -7,7 +7,7 @@
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    
   
     width: 390px;
 
@@ -28,6 +28,7 @@
 }
 
 .bottomCompDiv {
+    background-color: white;
     width: 100px;
     margin: 10px;
     border: solid 2px;

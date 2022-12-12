@@ -28,8 +28,7 @@ function BigCard() {
       spd: "029",
     },
 
-    descripcion:
-      ".....",
+    descripcion: ".....",
   });
 
   function consultarId(id) {
@@ -62,7 +61,7 @@ function BigCard() {
   return (
     <div id="bigCardDiv" style={{ backgroundColor: tipoAcolor(poke.tipo1) }}>
       <div id="bigCardTopDiv">
-        <Link to={"/"}>
+        <Link to={"/pokedex"}>
           <div id="bigCardArrow"> </div>
         </Link>
         <p id="bigCardName">{poke.nombre}</p>
@@ -74,7 +73,7 @@ function BigCard() {
             to={`/pokemons/${getPrevious(poke.id)}`}
           ></Link>
         )}
-        <img src={poke.img} id="bigCardPokeImg" alt={poke.nombre}/>
+        <img src={poke.img} id="bigCardPokeImg" alt={poke.nombre} />
         {getNext(poke.id) !== "000" && (
           <Link
             id="bigCardArrowRight"
@@ -86,14 +85,41 @@ function BigCard() {
 
       <div id="bigCardBottomDiv">
         <div id="bigCardEvosDiv">
-          <p className="bigCardPAbout" style={{ color: tipoAcolor(poke.tipo1) }} id="bigCardPAbout">
-          Evoluciones
-        </p>
-        {(poke.stage1 || poke.stage2 || poke.stage3) && <div id="bigCardPEvos">
-          {poke.stage1 && <img id="bigCardPokeStageImg1" className="bigCardPokeStageImg" src={poke.stage1pic} alt={poke.stage1}/>}
-          {poke.stage2 && <img id="bigCardPokeStageImg2" className="bigCardPokeStageImg" src={poke.stage2pic} alt={poke.stage2}/>}
-          {poke.stage3 && <img id="bigCardPokeStageImg3" className="bigCardPokeStageImg" src={poke.stage3pic} alt={poke.stage3}/>}
-        </div>}
+          <p
+            className="bigCardPAbout"
+            style={{ color: tipoAcolor(poke.tipo1) }}
+            id="bigCardPAbout"
+          >
+            Evoluciones
+          </p>
+          {(poke.stage1 || poke.stage2 || poke.stage3) && (
+            <div id="bigCardPEvos">
+              {poke.stage1 && (
+                <img
+                  id="bigCardPokeStageImg1"
+                  className="bigCardPokeStageImg"
+                  src={poke.stage1pic}
+                  alt={poke.stage1}
+                />
+              )}
+              {poke.stage2 && (
+                <img
+                  id="bigCardPokeStageImg2"
+                  className="bigCardPokeStageImg"
+                  src={poke.stage2pic}
+                  alt={poke.stage2}
+                />
+              )}
+              {poke.stage3 && (
+                <img
+                  id="bigCardPokeStageImg3"
+                  className="bigCardPokeStageImg"
+                  src={poke.stage3pic}
+                  alt={poke.stage3}
+                />
+              )}
+            </div>
+          )}
         </div>
         <div id="bigCardTipos">
           <p
@@ -135,7 +161,9 @@ function BigCard() {
                 <p className="bigCardPokeParamsP">{poke.ability2}</p>
               )}
             </div>
-            <p id="bigCardParamsAbilities" className="bigCardPokeParamsDesc ">Abilities</p>
+            <p id="bigCardParamsAbilities" className="bigCardPokeParamsDesc ">
+              Abilities
+            </p>
           </div>
         </div>
 
