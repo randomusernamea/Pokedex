@@ -92,8 +92,12 @@
 #bigCardPEvos{
     display:none;
 }
-#bigCardPabout:hover + #bigCardPEvos{
+#bigCardPAbout:hover + #bigCardPEvos{
     display:block;
+}
+
+#bigCardPAbout:not :hover + #bigCardPEvos{
+    display:none;
 }
 
 #bigCardTipos {
