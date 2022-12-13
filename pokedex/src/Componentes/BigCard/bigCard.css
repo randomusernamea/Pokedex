@@ -100,7 +100,7 @@
 }
 #bigCardPAbout {
     text-align: center;
-    
+    z-index: 3;
 }
 
 #bigCardPEvos{
