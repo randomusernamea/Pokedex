@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
   const [usuario, setUsuario] = useState("");
@@ -21,7 +22,7 @@ function Home() {
 
   return (
     <>
-      <div>
+      <div className="HomePageBackground">
         <div className="HomeLogin">
           <form onSubmit={onSubmitSesion}>
             <label htmlFor="email">E-mail</label>
@@ -46,7 +47,9 @@ function Home() {
             />
             <br />
             <Link to={`pokedex`}>
-              <button type="submit">Iniciar</button>
+              <button id="btn-neon" type="submit">
+                Iniciar
+              </button>
             </Link>
           </form>
         </div>
