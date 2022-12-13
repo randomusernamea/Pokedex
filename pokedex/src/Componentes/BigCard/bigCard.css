@@ -74,6 +74,8 @@
     top: 100px;
     margin: auto;
     grid-area: image;
+    height: 200px;
+    width: 200px;
 }
 
 .bigCardPokeStageImg{
