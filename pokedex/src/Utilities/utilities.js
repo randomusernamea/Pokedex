@@ -44,7 +44,7 @@ export const tipoAcolor = (tipo) => {
 export const getPrevious = (id) => {
   switch (id) {
     case "001":
-      return "304";
+      return "645";
     case "004":
       return "001";
     case "007":
@@ -53,17 +53,29 @@ export const getPrevious = (id) => {
       return "007";
     case "025":
       return "012";
-    case "092":
+    case "065":
       return "025";
+    case "092":
+      return "065";
     case "132":
       return "092";
-    case "151":
+    case "145":
       return "132";
-    case "304":
+    case "151":
+      return "145";
+    case "202":
       return "151";
+    case "212":
+      return "202";
+    case "304":
+      return "212";
+    case "497":
+      return "304";
+    case "645":
+      return "497";
     default:
       return "000";
-  }
+    }
 };
 
 export const getNext = (id) => {
@@ -77,14 +89,26 @@ export const getNext = (id) => {
     case "012":
       return "025";
     case "025":
+      return "065";
+    case "065":
       return "092";
     case "092":
       return "132";
     case "132":
+      return "145";
+    case "145":
       return "151";
     case "151":
+      return "202";
+    case "202":
+      return "212";
+    case "212":
       return "304";
     case "304":
+      return "497";
+    case "497":
+      return "645";
+    case "645":
       return "001";
     default:
       return "000";
