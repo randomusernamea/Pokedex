@@ -1,4 +1,9 @@
-{"pokemons": [
+{
+    "users":[
+        {"email": "asd@qwe.com",
+        "password": "asd"}
+    ],
+    "pokemons": [
     {
         "id": "001",
         "nombre": "Bulbasur",
