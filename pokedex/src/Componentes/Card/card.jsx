@@ -1,12 +1,9 @@
 import Pokedex from "../Pokedex/pokedex";
 import "./card.css";
 import { Link } from "react";
-import {tipoAcolor} from '../../Utilities/utilities'
-
+import { tipoAcolor } from "../../Utilities/utilities";
 
 function Card(props) {
-  
-
   const divStyle = tipoAcolor(props.tipo);
   return (
     <div style={{ borderColor: divStyle }} className="bottomCompDiv">

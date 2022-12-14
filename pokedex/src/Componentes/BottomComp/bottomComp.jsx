@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function BottomComp(props) {
   return (
-    <>
+    <div className="bodyBottomComp">
       <div className="cards">
         {props.pokemones?.map((poke) => {
           return (
@@ -18,8 +18,13 @@ function BottomComp(props) {
             </Link>
           );
         })}
-      </div>{" "}
-    </>
+      </div>
+      <div className="btnCointainerBottomComp">
+        <Link to={`/`}>
+          <button className="btnBottomComp">Cerrar sesión</button>
+        </Link>
+      </div>
+    </div>
   );
 }
 

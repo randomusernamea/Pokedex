@@ -12,6 +12,9 @@
 
 
 }
+.bodyBottomComp{
+    height: 100%;
+}
 
 .bottomCompP {
     text-align: right;
@@ -45,6 +48,54 @@
        color: white;
 }
 
+
+.btnCointainerBottomComp{
+    text-align: center;
+}
+
+.btnBottomComp {
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgb(240, 110, 110);
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 2255, 0.5);
+    transition: transform 0.3 ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+}
+
+.btnBottomComp::after{
+    
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #ff3cac;
+    background-image: linear-gradient(
+        225deg,
+     #ea7b7b 0%,
+     #ddd8d8 50%,
+     #060107 100% 
+     );
+     z-index: -1;
+     transition: transform 0.5s ease;
+}
+
+
+.btnBottomComp:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(172, 135, 221, 0.5),
+    -10px 10px 25px 0 rgba(67, 110, 125, 0.5);
+}
+
+.btnBottomComp:hover::after{
+       transform: rotate(150deg);
+}
 
 
 

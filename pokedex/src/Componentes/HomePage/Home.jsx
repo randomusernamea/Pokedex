@@ -24,7 +24,7 @@ function Home() {
     <>
       <div className="HomePageBackground">
         <div className="HomeLogin">
-          <form onSubmit={onSubmitSesion}>
+          <form className="HomePageForm" onSubmit={onSubmitSesion}>
             <label htmlFor="email">E-mail</label>
             <br />
             <input

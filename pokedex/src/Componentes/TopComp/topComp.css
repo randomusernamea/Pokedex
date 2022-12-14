@@ -25,7 +25,7 @@
 }
 
 #topCompSortingButton{
-    background-color: rgba(0, 0, 0, 255);
+    background-color: transparent;
     border: 0;
     grid-area:changeSorting;
     height: 64px;
@@ -35,11 +35,13 @@
 }
 
 .changeSortingButtontrue{
+    background-size: contain;
     background-repeat: no-repeat;
-   background-image: url('./Imgs/AZ\ Search.png')
+   background-image: url('./Imgs/sort-az.png')
 }
 
 .changeSortingButtonfalse{
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url('./Imgs/Number\ Search.png')
 }

@@ -12,8 +12,15 @@
     align-items: center;
     height: 100vh;
 }
+.HomePageForm{
+    height: 20%;
+    width: 50%;
+    border-radius: 10px;
+    background-image: url("../../../public/images/wallpaperPokemon.jpg");
+}
 
 #btn-neon{
+    border-radius: 30px;
     margin-top: 5px;
     background-color: #e2e839;
     position: relative;
