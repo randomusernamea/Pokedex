@@ -1,5 +1,4 @@
 .HomePageBackground {
-
     height: 100vh;
     background-image: url("../../../public/images/pokemonWallpaper2.jpg");
 }
@@ -13,6 +12,7 @@
     height: 100vh;
 }
 .HomePageForm{
+    background-repeat: no-repeat;
     height: 20%;
     width: 50%;
     border-radius: 10px;
