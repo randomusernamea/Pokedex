@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import BigCard from "./Componentes/BigCard/bigCard";
 import Pokedex from "./Componentes/Pokedex/pokedex";
+import ErrorComp from "./Componentes/ErrorComp/ErrorComp"
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "pokemons/:idPokemons",
     element: <BigCard />,
+  },
+  {
+    path: "*",
+    element: <ErrorComp/>,
   },
 ]);
 
