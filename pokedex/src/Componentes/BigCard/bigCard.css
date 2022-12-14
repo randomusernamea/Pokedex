@@ -38,6 +38,7 @@
 
 #bigCardTopDiv {
     font-size: 1.5rem;
+    position: static;
     height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -261,9 +262,11 @@
     background-image: url("../../../public/images/arrowLeft.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50px;
-    height: 100px;
-
+    width: 16px;
+    height: 32px;
+    position:relative;
+    top:48px;
+    left: 10px;
     grid-area: previous;
 }
 
@@ -274,8 +277,11 @@
     background-image: url("../../../public/images/Frame.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50px;
-    height: 100px;
+    position:relative;
+    top:48px;
+    left: 48px;
+    width: 16px;
+    height: 32px;
 }
 
 #bigCardPokeBallImage {
