@@ -9,16 +9,32 @@ function Home() {
 
   const onChangeValueUsuario = (e) => {
     setUsuario(e.target.value);
-    console.log(usuario);
   };
 
   const onChangeValuePassword = (e) => {
     setPassword(e.target.value);
-    console.log(password);
   };
   const onSubmitSesion = (e) => {
     e.preventDefault();
   };
+
+  /*function consultarId(email) {
+    fetch("http://localhost:3000/users/" + usuario, {
+      method: "GET",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject(response);
+      })
+      .then((data) => {
+
+      })
+      .catch((error) => {
+        alert(error.statusText);
+      });
+  }*/
 
   return (
     <>
