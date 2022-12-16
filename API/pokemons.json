@@ -1,4 +1,14 @@
-{"pokemons": [
+{ "users":[{
+  "password":"12345",
+  "id": "siuu@gmail.com"
+  
+},
+{
+    "password":"1234",
+    "id":"noo@gmail.com"
+
+}],
+    "pokemons": [
     {
         "id": "001",
         "nombre": "Bulbasur",

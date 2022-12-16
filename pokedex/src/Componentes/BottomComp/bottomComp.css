@@ -50,7 +50,11 @@
 
 
 .btnCointainerBottomComp{
+    overflow: hidden;
+    bottom: 20px;
     text-align: center;
+    position: absolute;
+    width: 100%;
 }
 
 .btnBottomComp {
